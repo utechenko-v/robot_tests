@@ -71,14 +71,35 @@ Quinta:
 Etender:
     intervals:
         default:
-            enquiry: [0, 5]
+            enquiry: [0, 7]
+            tender:  [0, 7]
+        belowThreshold:
+            enquiry: [0, 20]
+            tender:  [0, 20]
+            accelerator: 1440
+        openua:
+            tender:  [1, 30]
+        openeu:
+            tender:  [1, 35]
+        below_complaints_lc:
+            enquiry: [0, 150]
+            tender:  [0, 10]
+            accelerator: 720
+        below_complaints_br:
+            enquiry: [0, 10]
+            tender:  [0, 10]
+            accelerator: 600
+        below_complaints_ar:
+            enquiry: [0, 10]
+            tender:  [0, 10]
+            accelerator: 240
     keywords_file: etender
     roles:
         provider:       Etender_Provider1
         provider1:      Etender_Provider2
         tender_owner:   Etender_Owner
         viewer:         Etender_Viewer
-    timeout_on_wait: 60
+    timeout_on_wait: 30
 DZO:
     intervals:
         default:

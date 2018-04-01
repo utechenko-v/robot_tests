@@ -334,7 +334,7 @@ def prepare_test_tender_data(procedure_intervals,
             tender_parameters, submissionMethodDetails)})
     elif mode == 'reporting':
         return munchify({'data': test_tender_data_limited(tender_parameters)})
-    elif mode == 'belowThreshold':
+    elif mode in ['belowThreshold', 'below_complaints_br', 'below_complaints_lc', 'below_complaints_ar']:
         return munchify({'data': test_tender_data(
             tender_parameters,
             submissionMethodDetails=submissionMethodDetails,
